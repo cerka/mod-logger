@@ -1,0 +1,25 @@
+{
+  "name": "mod-logger",
+  "version": "1.0.0",
+  "description": "auto config logger using mod-config",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "jest",
+    "check": "npm test && $(npm bin)/eslint src test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:cerka/mod-logger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/cerka/mod-logger#readme",
+  "devDependencies": {
+    "eslint": "^5.1.0",
+    "jest": "^23.4.1"
+  },
+  "dependencies": {
+    "bunyan": "^1.8.12",
+    "mod-config": "git+https://git@github.com/cerka/mod-config.git"
+  }
+}
