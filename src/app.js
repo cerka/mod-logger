@@ -2,9 +2,10 @@ const conf = require('mod-config').logger;
 const Bunyan = require('bunyan');
 
 const logger_defaults = {name:'logger',level:'trace'};
+
 class Logger extends Bunyan {
     constructor () {
-        super();    
+        super();        
     }
 
     static getInstance() {
@@ -16,6 +17,7 @@ class Logger extends Bunyan {
                 this._instance = Logger.createLogger(logger_defaults);
                 this._instance.trace('logger not configured, see https://github.com/trentm/node-bunyan/blob/master/README.md');
             }
+            this._instance.log = this._instance.info
         }
         return this._instance;
     }
