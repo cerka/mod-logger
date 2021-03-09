@@ -1,9 +1,11 @@
 describe('[SMOKE]', () => {
     describe('load conf test', () => {
         it('work', () => {
+            let logger
             expect(() => {
-                require('../src/app');
-            }).not.toThrow();
-        });
-    });
-});
+                logger = require('../src/app')
+                logger.log("test")
+            }).not.toThrow()
+        })
+    })
+})
